@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -64,18 +66,18 @@
     user-select: none;
 }
 
-.editbtn {
+.addbtn {
     background-color: #BB9786;
     color: #401200;
-    min-width: 175px;
-    width: initial;
-    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
     text-align: center;
     padding: 15px;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 2500px;
     user-select: none;
 }
 
@@ -101,10 +103,12 @@ h1 {
 
 h2 {
     font-size: 30px;
+    float: left;
 }
 
 .menuitemdescription {
     margin: 0 0 50px 0;
+    float: left;
 }
 
 .menuitemdescription::after {
@@ -116,6 +120,33 @@ h2 {
     height: 5px;
     border-radius: 5px;
 }
+
+.removemenuitem {
+    color: #401200;
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.editmenuitem {
+    background-color: #BB9786;
+    color: #401200;
+    min-width: 100px;
+    width: initial;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 25px;
+    user-select: none;
+    float: right;
+}
+
 
 .menuheadline {
     color: #401200;
@@ -178,4 +209,44 @@ tr:nth-child(2) {
 
 tr:nth-child(1) {
     background-color: #AC806C;
+}
+
+/* unvisited link */
+.removemenuitem:link {
+    color: #401200;
+}
+
+/* visited link */
+.removemenuitem:visited {
+    color: #401200;
+}
+
+/* mouse over link */
+.removemenuitem:hover {
+    color: #BB9786;
+}
+
+/* selected link */
+.removemenuitem:active {
+    color: #401200;
+}
+
+/* unvisited link */
+.editmenuitem:link {
+    color: #401200;
+}
+
+/* visited link */
+.editmenuitem:visited {
+    color: #401200;
+}
+
+/* mouse over link */
+.editmenuitem:hover {
+    color: #BB9786;
+}
+
+/* selected link */
+.editmenuitem:active {
+    color: #401200;
 }

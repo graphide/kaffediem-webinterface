@@ -6,7 +6,6 @@
 <head>
     <!-- Forteller HTML dokumentet hvor den skal leite for CSS dokumentet -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="assets/fonts/font.css">
     <title>Tobias' Skoleside</title>
 
 
@@ -49,15 +48,31 @@
         </h1>
 
         <div class="edit">
-            <a href="#" tabindex="-1">  <button class="editbtn">Rediger nå</button></a>
+            <a href="#" tabindex="-1">  <button class="addbtn">+</button></a>
         </div>
 
     </div>
 
-    <div class="menuitems" contenteditable="true">
-        <h2>
-            Varm Sjokolade m/ Krem
-        </h2>
+    <div class="menuitems" contenteditable="false">
+
+        <div class="menuitemgrid">
+            <a href="#" class="test">
+                <p class="removemenuitem">
+                    X
+                </p>
+            </a>
+
+            <a href="#" class="test">
+                <p class="editmenuitem">
+                    Rediger
+                </p>
+            </a>
+
+            <h2>
+                Varm Sjokolade m/ Krem
+            </h2>
+        </div>
+
         <p class="menuitemdescription">
             Varm sjokolade, også kjent som varm kakao eller drikkesjokolade,
             er en oppvarmet drink bestående av barbert sjokolade,
@@ -67,20 +82,19 @@
             Varm sjokolade laget med smeltet sjokolade kalles noen ganger drikkesjokolade,
             preget av mindre sødme og tykkere konsistens. <br>
         </p>
-
-        <div class="line"></div>
-
+        
         <h2>
-            Varm Sjokolade u/ Krem
+            Varm Sjokolade m/ Krem
         </h2>
-        <p>
+
+        <p class="menuitemdescription">
             Varm sjokolade, også kjent som varm kakao eller drikkesjokolade,
             er en oppvarmet drink bestående av barbert sjokolade,
             smeltet sjokolade eller kakaopulver,
             oppvarmet melk eller vann, og vanligvis et søtningsmiddel.
             Varm sjokolade kan være toppet med pisket krem eller marshmallows.
             Varm sjokolade laget med smeltet sjokolade kalles noen ganger drikkesjokolade,
-            preget av mindre sødme og tykkere konsistens.
+            preget av mindre sødme og tykkere konsistens. <br>
         </p>
 
     </div>
