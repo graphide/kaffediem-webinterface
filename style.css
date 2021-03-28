@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
 
 .grid {
+    padding: 5px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:"header"
@@ -8,9 +9,21 @@
 }
 
 .menugrid {
+    padding: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:"help headline edit";
+    grid-template-areas:"help      menuheadline add"
+                        "menuitems menuitems    menuitems"
+                        "menuitems menuitems    menuitems";
+}
+
+.menuitemgrid {
+    padding: 5px;
+    max-height: 50px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:"menuitemheader      menuitemheader      menuitemheader      edit                delete";
 }
 
 .body {
@@ -46,7 +59,7 @@
     margin: 0 20px 0 0
 }
 
-.edit {
+.add {
     text-align: right;
 }
 
@@ -74,9 +87,9 @@
 .addbtn {
     background-color: #BB9786;
     color: #401200;
-    width: 65px;
-    height: 65px;
     font-size: 30px;
+    width: 2em;
+    height: 2em;
     border: none;
     cursor: pointer;
     text-align: center;
@@ -94,26 +107,23 @@
     border-radius: 50px;
 }
 
-.headline {
-    color: #401200;
-    text-align: center;
-    font-size: 40px;
-}
-
 h1 {
     color: #401200;
     text-align: center;
     font-size: 40px;
 }
 
-h2 {
+.headline {
+    text-align: left;
     font-size: 30px;
-    float: left;
+    font-weight: bold;
+    text-decoration: none;
+    color: #401200;
+    margin: 0;
 }
 
 .menuitemdescription {
-    margin: 0 0 50px 0;
-    float: left;
+    margin: 25px 0 80px 0;
 }
 
 .menuitemdescription::after {
@@ -121,7 +131,7 @@ h2 {
     content: "";
     background-color: #401200;
     width: 220px;
-    margin: 25px 0;
+    margin: 40px 0;
     height: 5px;
     border-radius: 5px;
 }
@@ -137,12 +147,12 @@ h2 {
 .editmenuitemheader {
     resize: none;
     width: 100%;
-    text-align: left;
+    text-align: center;
     border-radius: 25px;
     margin-top: 25px;
 }
 
-.editmenuitem {
+.itembtn {
     background-color: #C59A7F;
     color: #401200;
     min-width: 125px;
@@ -152,13 +162,24 @@ h2 {
     cursor: pointer;
     text-align: center;
     padding: 15px;
-    margin: 0 0 0 15px;
     text-decoration: none;
     border-radius: 25px;
     user-select: none;
-    float: right;
 }
 
+.delete {
+    text-align: center;
+}
+
+.edit {
+    text-align: center;
+}
+
+.menuitemheadline {
+    cursor: default;
+    margin: 0;
+    text-decoration: none;
+}
 
 .menuheadline {
     color: #401200;
@@ -166,10 +187,12 @@ h2 {
     font-size: 60px;
 }
 
-.img {
-    float: right;
-    margin: 0 2% 0 0;
-}
+/*  Alt over er pagespesific  ↑  */
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*  ↓  Alt under er general  ↓  */
+
 
 .splashbody {
     background-color: #C59A7F;
@@ -224,22 +247,34 @@ tr:nth-child(1) {
 }
 
 /* unvisited link */
-.editmenuitem:link {
+.itembtn:link {
     color: #401200;
 }
 
 /* visited link */
-.editmenuitem:visited {
+.itembtn:visited {
     color: #401200;
 }
 
 /* mouse over link */
-.editmenuitem:hover {
+.itembtn:hover {
     background-color: #BB9786;
     transition-duration: .5s;
 }
 
 /* selected link */
-.editmenuitem:active {
+.itembtn:active {
     color: #401200;
 }
+
+.main { grid-area: main; }
+.header { grid-area: header; }
+.menuheadline { grid-area: menuheadline; }
+.menuitemheadline { grid-area: menuitemheader; }
+.menuitemdescription { grid-area: menuitemdescription; }
+.menuitems { grid-area: menuitems; }
+.add { grid-area: add; }
+.edit { grid-area: edit;}
+.delete { grid-area: delete;}
+
+.help { grid-area: help;}
